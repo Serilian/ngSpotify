@@ -9,7 +9,8 @@ import { HomeComponent } from './home/home.component';
 import {SpotifyService} from './spotify.service';
 
 import {FormsModule} from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpModule} from '@angular/http';
+
 
 @NgModule({
   declarations: [
@@ -21,7 +22,7 @@ import {HttpClientModule} from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule,
+    HttpModule,
     FormsModule
   ],
   providers: [SpotifyService],

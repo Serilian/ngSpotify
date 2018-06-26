@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
       (data) => {
         this.spotifyService.searchMusic(this.searchStr, 'artist', data.access_token).subscribe(
           (res) => {
-            console.log(res.artist.items);
+            console.log(res.artists.items);
           });
       }
     );
