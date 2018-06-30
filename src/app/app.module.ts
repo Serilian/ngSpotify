@@ -10,6 +10,7 @@ import {SpotifyService} from './spotify.service';
 
 import {FormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
+import { ArtistComponent } from './artist/artist.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import {HttpModule} from '@angular/http';
     AppComponent,
     NavbarComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    ArtistComponent
   ],
   imports: [
     BrowserModule,

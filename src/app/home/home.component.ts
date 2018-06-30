@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {SpotifyService} from '../spotify.service';
+import {Artist} from '../artist';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -9,8 +11,9 @@ import {SpotifyService} from '../spotify.service';
 export class HomeComponent implements OnInit {
 
   searchStr: string;
+  searchRes: Artist[];
 
-  constructor(private spotifyService: SpotifyService) {
+  constructor(private spotifyService: SpotifyService, private router: Router) {
   }
 
   ngOnInit() {
@@ -20,7 +23,7 @@ export class HomeComponent implements OnInit {
       (data) => {
         this.spotifyService.searchMusic(this.searchStr, 'artist', data.access_token).subscribe(
           (res) => {
-            console.log(res.artists.items);
+            this.searchRes = res.artists.items;
           });
       }
     );

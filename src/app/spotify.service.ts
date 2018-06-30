@@ -25,9 +25,9 @@
       // let params : URLSearchParams = new URLSearchParams();
       // params.set('grant_type' , 'client_credentials');
       // let body = params.toString();
-      var params = ('grant_type=client_credentials');
+      const params = ('grant_type=client_credentials');
 
-      var headers = new Headers();
+      const headers = new Headers();
       headers.append('Authorization', 'Basic ' + this.encoded);
 
       headers.append('Content-Type', 'application/x-www-form-urlencoded');
@@ -42,11 +42,11 @@
 
       console.log(this.encoded);
       this.searchUrl = 'https://api.spotify.com/v1/search?query=' + str + '&offset=0&limit=50&type=' + type;
-      let headers = new Headers();
+      const headers = new Headers();
       headers.append('Authorization', 'Bearer ' + token);
 
       return this._http.get(this.searchUrl, {headers: headers})
-        .map((res: Response) => res.json())
+        .map((res: Response) => res.json());
 
 
     }
@@ -54,7 +54,7 @@
     getArtist(id: string, token: string) {
 
       this.ArtistUrl = 'https://api.spotify.com/v1/artists/' + id;
-      let headers = new Headers();
+      const headers = new Headers();
       headers.append('Authorization', 'Bearer ' + token);
 
       return this._http.get(this.ArtistUrl, {headers: headers})
@@ -67,7 +67,7 @@
     getAlbums(artistId: string, token: string) {
 
       this.AlbumsUrl = 'https://api.spotify.com/v1/artists/' + artistId + '/albums/?query=&limit=50';
-      let headers = new Headers();
+      const headers = new Headers();
       headers.append('Authorization', 'Bearer ' + token);
 
       return this._http.get(this.AlbumsUrl, {headers: headers})
@@ -80,7 +80,7 @@
     getAlbum(id: string, token: string) {
 
       this.AlbumUrl = 'https://api.spotify.com/v1/albums/' + id;
-      let headers = new Headers();
+      const headers = new Headers();
       headers.append('Authorization', 'Bearer ' + token);
 
       return this._http.get(this.AlbumUrl, {headers: headers})
