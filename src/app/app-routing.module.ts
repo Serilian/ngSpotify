@@ -10,6 +10,7 @@ const appRoutes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'artist/:id', component: ArtistComponent},
+  {path: 'home/artist/:id', component: ArtistComponent},
   {path: '', component: HomeComponent}
   ];
 

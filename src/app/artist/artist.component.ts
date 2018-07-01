@@ -28,8 +28,7 @@ export class ArtistComponent implements OnInit {
               this.artist = artist;
             });
             this.spotifyService.getAlbums(id, data.access_token)
-              .subscribe(albums => this.albums = albums.tems);
-
+              .subscribe(albums => this.albums = albums.items);
           });
       });
 
