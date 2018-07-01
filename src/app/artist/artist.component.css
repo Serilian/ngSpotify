@@ -27,10 +27,9 @@ h1 {
   overflow: hidden;
 }
 
-.album {
+.card {
   text-align: center;
   background: #333;
-  padding: 10px 20px;
   border: #666 1px solid;
   height: 450px;
 }

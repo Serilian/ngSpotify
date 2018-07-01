@@ -10,13 +10,14 @@
   </header>
   <div class="artist-albums">
     <div class="row">
-      <div *ngFor='let album of albums' class="col-md-3">
-        <div class="card card-body album">
+      <div *ngFor='let album of albums' class="col-sm-6 col-md-4 col-xl-3">
+        <div class="card">
           <div *ngIf='album.images.length > 0'>
-            <img class="album-thumb img-thumbnail" src="{{album.images[0].url}}">
-            <h5 class="mt-2">{{album.name}}</h5>
-            <a class="btn btn-default btn-block" routerLink="/album/{{album.id}}">Album Details</a>
-
+            <img class="card-img" src="{{album.images[0].url}}">
+            <div class="card-body">
+              <h5 class="card-title">{{album.name}}</h5>
+              <a class="btn btn-primary" routerLink="/album/{{album.id}}">Album Details</a>
+            </div>
           </div>
         </div>
       </div>
