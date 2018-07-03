@@ -13,7 +13,6 @@ const appRoutes: Routes = [
   {path: 'artist/:id', component: ArtistComponent},
   {path: 'home/artist/:id', component: ArtistComponent},
   {path: 'album/:id', component: AlbumComponent},
-  {path: 'home/album/:id', component: AlbumComponent},
   {path: '', component: HomeComponent}
   ];
 
