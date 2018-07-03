@@ -31,6 +31,5 @@ export class ArtistComponent implements OnInit {
               .subscribe(albums => this.albums = albums.items);
           });
       });
-
   }
 }
